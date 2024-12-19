@@ -1,0 +1,88 @@
+Module 2: Kotlin Programming Basics  
+
+Theory Assignment:  
+
+1. Explain the different data types available in Kotlin. How do val and var differ?  
+
+In Kotlin, the common data types include:  
+- Int  
+- Float  
+- Char  
+- Boolean  
+- String  
+- Arrays  
+
+The difference between var and val is:  
+- var: Mutable, meaning the value can be changed.  
+  Example:  
+  kotlin  
+  var y = 20  
+  y = 30  
+    
+
+- val: Immutable, meaning the value cannot be changed once assigned.  
+  Example:  
+  kotlin  
+  val x = 10  
+  // x = 20 -> This will cause an error  
+    
+
+2. What is a lambda expression in Kotlin, and where can it be used?  
+
+A lambda expression is an anonymous function written in braces {}. It allows you to define small, reusable blocks of code that can be stored in variables or passed as arguments to functions.  
+
+It is often used in higher-order functions or when passing functions as parameters.  
+
+Example:  
+kotlin  
+val multiply = { a: Int, b: Int -> a  b }  
+println(multiply(3, 4))  // Output: 12  
+  
+
+---
+
+### Object-Oriented Programming in Kotlin  
+
+#### • Theory Assignment:  
+
+1. Describe the principles of Object-Oriented Programming (OOP).  
+
+The four key principles of OOP are:  
+1. Encapsulation: Grouping data and functions into classes and using access modifiers like private or protected to restrict direct access.  
+2. Abstraction: Simplifying complex systems by exposing only the necessary parts through abstract classes or interfaces.  
+3. Inheritance: Enabling a class to reuse the properties and behaviors of another class.  
+4. Polymorphism: Allowing functions or methods to behave differently based on their input or the type of object being used, such as through overriding or overloading.  
+
+2. Explain the differences between abstract class and interface in Kotlin and provide examples of when to use them.  
+
+- Abstract Class:  
+  - Use it when you need to define a common base with both implemented and abstract methods.  
+  - A class can inherit from only one abstract class.  
+
+Example:  
+kotlin  
+abstract class Shape {  
+    abstract fun area(): Int  
+}  
+
+class Circle(val radius: Int) : Shape() {  
+    override fun area() = (3.14  radius  radius).toInt()  
+}  
+  
+
+- Interface:  
+  - Use it when you want to define only behavior without any implementation details.  
+  - A class can implement multiple interfaces.  
+
+Example:  
+kotlin  
+interface Drawable {  
+    fun draw()  
+}  
+
+class Square : Drawable {  
+    override fun draw() {  
+        println("Drawing Square")  
+    }  
+}  
+  
